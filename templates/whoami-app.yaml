@@ -14,4 +14,7 @@ spec:
     path: whoami
     repoURL: https://github.com/Rahel-A/homelab
     targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
 
