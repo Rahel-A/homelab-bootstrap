@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: smarthome
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: argocd
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: smarthome
+    repoURL: https://github.com/Rahel-A/homelab
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+
+
