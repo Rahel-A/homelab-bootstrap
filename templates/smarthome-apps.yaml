@@ -13,7 +13,7 @@ spec:
   source:
     path: smarthome
     repoURL: https://github.com/Rahel-A/homelab
-    targetRevision: HEAD
+    targetRevision: gvm2mqtt
   syncPolicy:
     automated:
       prune: true
